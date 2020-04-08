@@ -6,7 +6,9 @@ public class Task {
     String name;
     int memuse = 0;
     int cpuUse = 0;
+
     double cpuPercent = 0;
+
     SystemInfo sysinf = new SystemInfo();
     TaskHandler parent;
 
@@ -14,7 +16,12 @@ public class Task {
         parent = p;
         String[] properties = CSVDATA.replaceAll("\"","").split(",", 5);
         name = properties[0].replaceAll(".exe","");
-        memuse = Integer.valueOf(properties[4].replaceAll(" K","").replaceAll(",",""));
+        String preMemuse = properties[4].replaceAll(" K","").replaceAll(",","");
+        if(preMemuse.equals("N/A")){
+            memuse=0;
+        }else {
+            memuse = Integer.valueOf(preMemuse);
+        }
     }
     void updateMemuse(int m){
         memuse=m;

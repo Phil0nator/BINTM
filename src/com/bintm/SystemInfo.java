@@ -38,9 +38,15 @@ public class SystemInfo {
     //returns a percent of total cpu capacity
     int getCpuUsage(){
 
-        return Integer.valueOf(io.getStdoutArrayFor("wmic cpu get loadpercentage")[2].substring(0,2));
+        return Integer.valueOf(io.getStdoutArrayFor("wmic cpu get loadpercentage")[2].substring(0,2).replaceAll(" ",""));
     }
+    String getGpuName(){
 
+        return io.getStdoutArrayFor("wmic path win32_VideoController get name ")[2];
+    }
+    double getSystemLoad(){
+        return os.getSystemLoadAverage();
+    }
 
 
 }
