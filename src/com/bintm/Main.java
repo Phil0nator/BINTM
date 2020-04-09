@@ -47,18 +47,6 @@ public class Main {
 		frame.pack();
 		th.populate();
 		th.startUpdateThread();
-		sleep(10000);
-		while(true){
-			ArrayList<Task> tasks = th.getImportantTasks();
-			for(int i = 0 ; i < tasks.size();i++){
-				Task t = tasks.get(i);
-				System.out.println(t.name);
-				System.out.println("\t" + t.getPercentOfRam() + "% of ram @" + t.memuse + " Kb");
-				System.out.println("\t" + t.getCpuPercent() + "% of CPU");
-			}
-
-		}
-		//frame.setVisible(true);
 
 
     }

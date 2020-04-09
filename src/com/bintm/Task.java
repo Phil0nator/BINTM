@@ -11,7 +11,25 @@ public class Task {
 
     SystemInfo sysinf = new SystemInfo();
     TaskHandler parent;
+    int priorityForLevel(int level){
 
+        switch(level){
+            case 0:
+                return 64;
+            case 1:
+                return 16384;
+            case 2:
+                return 32;
+            case 3:
+                return 32768;
+            case 4:
+                return 128;
+            case 5:
+                return 256;
+        }
+        return -400;
+
+    }
     Task(String CSVDATA, TaskHandler p){
         parent = p;
         String[] properties = CSVDATA.replaceAll("\"","").split(",", 5);
@@ -60,6 +78,29 @@ public class Task {
     double getCpuPercent(){
         return cpuPercent;
     }
+    boolean kill(){
 
+        try{
+            String resp = parent.io.getStdoutFor("TASKKILL /T /F /IM" + name + ".exe");
+            return resp.split(":")[0].equals("SUCCESS");
+        }catch(Exception e){
+            e.printStackTrace();
+            return false;
+
+        }
+
+    }
+    boolean setPriority(int level){
+
+        try{
+
+            parent.io.execute("wmic process where name=\"" +name+ "\" call setpriority \""+priorityForLevel(level)+"\"");
+            return true;
+        }catch(Exception e){
+            e.printStackTrace();
+            return false;
+        }
+
+    }
 
 }

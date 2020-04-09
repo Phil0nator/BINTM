@@ -98,7 +98,8 @@ public class TaskHandler {
     void updateCpuUsage(){
 
         CPUUpdater cpu = new CPUUpdater(tasks);
-        new Thread(cpu).start();
+        //new Thread(cpu).start();
+        cpu.run();
     }
 
     void startUpdateThread(){
@@ -113,7 +114,6 @@ public class TaskHandler {
 
 
 }
-
 
 class TaskUpdater implements Runnable{
 

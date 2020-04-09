@@ -17,8 +17,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/bintm/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+            <state relative-caret-position="789">
+              <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -40,26 +40,28 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/bintm/Task.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+            <state relative-caret-position="243">
+              <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
               <folding>
+                <element signature="method#priorityForLevel#0;class#Task#0" />
                 <element signature="method#Task#0;class#Task#0" />
                 <element signature="method#getSecondsOf#0;class#Task#0" />
                 <element signature="method#updateCpuUse#0;class#Task#0" />
-                <element signature="e#1010#1581#0" />
+                <element signature="method#kill#0;class#Task#0" />
+                <element signature="method#setPriority#0;class#Task#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/bintm/SystemInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+            <state relative-caret-position="459">
+              <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#SystemInfo#0;class#SystemInfo#0" />
@@ -76,19 +78,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/bintm/TaskHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="134" column="22" lean-forward="true" selection-start-line="134" selection-start-column="22" selection-end-line="134" selection-end-column="22" />
+            <state relative-caret-position="297">
+              <caret line="150" column="18" selection-start-line="150" selection-start-column="18" selection-end-line="150" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="class#TaskHandler#0" />
                 <element signature="method#notOsTask#0;class#TaskHandler#0" />
                 <element signature="method#getTableHeader#0;class#TaskHandler#0" />
                 <element signature="method#getInfoString#0;class#TaskHandler#0" />
                 <element signature="method#addTask#0;class#TaskHandler#0" />
-                <element signature="method#updateCpuUsage#0;class#TaskHandler#0" />
+                <element signature="method#startUpdateThread#0;class#TaskHandler#0" />
                 <element signature="method#stopUpdateThread#0;class#TaskHandler#0" />
+                <element signature="class#TaskUpdater#0" />
                 <element signature="method#sleep#0;class#TaskUpdater#0" />
-                <element signature="e#3524#3525#0" expanded="true" />
-                <element signature="e#3544#3545#0" expanded="true" />
+                <element signature="class#CPUUpdater#0" />
               </folding>
             </state>
           </provider>
@@ -111,11 +114,11 @@
       <list>
         <option value="$PROJECT_DIR$/temp/temp.txt" />
         <option value="$PROJECT_DIR$/temp/temp1.txt" />
-        <option value="$PROJECT_DIR$/src/com/bintm/TaskHandler.java" />
-        <option value="$PROJECT_DIR$/src/com/bintm/Task.java" />
-        <option value="$PROJECT_DIR$/src/com/bintm/Main.java" />
         <option value="$PROJECT_DIR$/src/com/bintm/SystemInfo.java" />
         <option value="$PROJECT_DIR$/src/com/bintm/IOHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/bintm/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/bintm/TaskHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/bintm/Task.java" />
       </list>
     </option>
   </component>
@@ -130,7 +133,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -154,6 +156,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -204,7 +207,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17537314" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17697228" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -213,7 +216,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.25027084" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.15384616" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -336,44 +339,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bintm/Task.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding>
-            <element signature="method#Task#0;class#Task#0" />
-            <element signature="method#getSecondsOf#0;class#Task#0" />
-            <element signature="method#updateCpuUse#0;class#Task#0" />
-            <element signature="e#1010#1581#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/bintm/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        <state relative-caret-position="789">
+          <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/bintm/TaskHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="134" column="22" lean-forward="true" selection-start-line="134" selection-start-column="22" selection-end-line="134" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#notOsTask#0;class#TaskHandler#0" />
-            <element signature="method#getTableHeader#0;class#TaskHandler#0" />
-            <element signature="method#getInfoString#0;class#TaskHandler#0" />
-            <element signature="method#addTask#0;class#TaskHandler#0" />
-            <element signature="method#updateCpuUsage#0;class#TaskHandler#0" />
-            <element signature="method#stopUpdateThread#0;class#TaskHandler#0" />
-            <element signature="method#sleep#0;class#TaskUpdater#0" />
-            <element signature="e#3524#3525#0" expanded="true" />
-            <element signature="e#3544#3545#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -392,8 +363,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/bintm/SystemInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+        <state relative-caret-position="459">
+          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#SystemInfo#0;class#SystemInfo#0" />
@@ -402,6 +373,41 @@
             <element signature="method#getAvailableRAM#0;class#SystemInfo#0" />
             <element signature="method#getCpuUsage#0;class#SystemInfo#0" />
             <element signature="method#getGpuName#0;class#SystemInfo#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bintm/TaskHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="150" column="18" selection-start-line="150" selection-start-column="18" selection-end-line="150" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#TaskHandler#0" />
+            <element signature="method#notOsTask#0;class#TaskHandler#0" />
+            <element signature="method#getTableHeader#0;class#TaskHandler#0" />
+            <element signature="method#getInfoString#0;class#TaskHandler#0" />
+            <element signature="method#addTask#0;class#TaskHandler#0" />
+            <element signature="method#startUpdateThread#0;class#TaskHandler#0" />
+            <element signature="method#stopUpdateThread#0;class#TaskHandler#0" />
+            <element signature="class#TaskUpdater#0" />
+            <element signature="method#sleep#0;class#TaskUpdater#0" />
+            <element signature="class#CPUUpdater#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/bintm/Task.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding>
+            <element signature="method#priorityForLevel#0;class#Task#0" />
+            <element signature="method#Task#0;class#Task#0" />
+            <element signature="method#getSecondsOf#0;class#Task#0" />
+            <element signature="method#updateCpuUse#0;class#Task#0" />
+            <element signature="method#kill#0;class#Task#0" />
+            <element signature="method#setPriority#0;class#Task#0" />
           </folding>
         </state>
       </provider>
