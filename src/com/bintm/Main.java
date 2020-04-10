@@ -31,7 +31,9 @@ public class Main {
 
 
 	    TaskHandler th = new TaskHandler();
-	    //th.startUpdateThread();
+		th.fh.parseAll();
+		th.fh.print();
+		//th.startUpdateThread();
 		JFrame frame = new JFrame("FrameDemo");
 
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -11,6 +11,7 @@ public class TaskHandler {
     IOHandler io = new IOHandler();
     TaskUpdater updater;
     boolean populating = false;
+    FileHandler fh = new FileHandler();
     static String[] osTaskNames = {
             "svchost.exe",
             ""
