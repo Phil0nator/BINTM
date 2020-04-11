@@ -4,14 +4,24 @@ import jdk.jfr.SettingDefinition;
 
 import java.time.Instant;
 import java.util.ArrayList;
+import java.util.Vector;
+
+enum SortOrderType{
+
+    SORT_NONE, SORT_ALPHA, SORT_RAM, SORT_CPU
+
+}
+
+
 
 public class TaskHandler {
 
-    ArrayList<Task> tasks = new ArrayList<Task>(0);
+    Vector<Task> tasks = new Vector<Task>(0);
     IOHandler io = new IOHandler();
     TaskUpdater updater;
     boolean populating = false;
     FileHandler fh = new FileHandler();
+    SortOrderType order = SortOrderType.SORT_NONE;
     static String[] osTaskNames = {
             "svchost.exe",
             ""
@@ -34,10 +44,14 @@ public class TaskHandler {
             Task t = new Task(taskdata[i],this);
             if (notOsTask(t.name+".exe")) {
                 addTask(t);
+
             }
 
         }
-        updateCpuUsage();
+        System.out.println("populate");
+        for( int i = 0 ; i < tasks.size();i++){
+            tasks.get(i).updateCpuUse();
+        }
 
     }
 
@@ -83,15 +97,36 @@ public class TaskHandler {
         }
     }
 
-    ArrayList<Task> getImportantTasks(){
-        ArrayList<Task> outpt = new ArrayList<Task>(1);
-        for(Task t: tasks){
+    void setSortOrder(SortOrderType type){
+        order = type;
+    }
 
+    void sort(ArrayList<Task> t){
+
+        switch (order){
+            case SORT_NONE:
+                break;
+            case SORT_ALPHA:
+                break;
+        }
+    }
+
+
+
+    ArrayList<Task> getImportantTasks(){
+
+
+        ArrayList<Task> outpt = new ArrayList<Task>(1);
+        for(int i = 0; i < tasks.size();i++){
+            Task t = tasks.get(i);
             if(t.getPercentOfRam()>0) {
                 outpt.add(t);
             }
 
         }
+
+
+
         return outpt;
 
     }
@@ -104,6 +139,7 @@ public class TaskHandler {
     }
 
     void startUpdateThread(){
+        System.out.println("Making thread");
         updater = new TaskUpdater(this);
         new Thread(updater).start();
     }
@@ -134,7 +170,7 @@ class TaskUpdater implements Runnable{
     }
 
     public void run(){
-
+        System.out.println("run");
         while(true){
             sleep(5000);
             if(stop){return;}
@@ -150,8 +186,8 @@ class TaskUpdater implements Runnable{
 }
 
 class CPUUpdater implements Runnable{
-    ArrayList<Task> tasks;
-    CPUUpdater(ArrayList<Task> t){
+    Vector<Task> tasks;
+    CPUUpdater(Vector<Task> t){
         tasks=t;
     }
 

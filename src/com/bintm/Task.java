@@ -3,7 +3,7 @@ package com.bintm;
 import java.time.Instant;
 
 public class Task {
-    String name;
+    String name = "";
     int memuse = 0;
     int cpuUse = 0;
 
@@ -69,7 +69,7 @@ public class Task {
         }
         cpuPercent = ((double)cpuUse/(double)totalTime)/sysinf.getCpuUsage();
         */
-        String[] data = parent.io.getStdoutArrayFor("typeperf \"\\process("+this.name+")\\% processor time\" -sc 1");
+        String[] data = parent.io.getStdoutArrayFor("typeperf \"process("+this.name+")\\% processor time\" -sc 1");
         this.cpuPercent = Double.valueOf(data[2].split(",")[1].replaceAll("\"",""));
     }
     int getPercentOfRam(){
